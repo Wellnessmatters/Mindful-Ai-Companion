@@ -13,6 +13,7 @@ st.set_page_config(
 )
 
 st.title("🧠 Mindful AI Companion")
+st.markdown("### Your 24/7 Mental Wellness Companion")
 st.caption("Your 24/7 personal mental wellness coach • Always here to listen")
 
 # Sidebar
