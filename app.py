@@ -3,7 +3,17 @@ import openai
 import os
 from datetime import datetime
 import json
+import base64
 
+# Use your uploaded logo as favicon (tab icon)
+favicon_url = "https://raw.githubusercontent.com/Wellnessmatters/mindful-ai-companion/main/Lotus-logo.png"
+
+st.set_page_config(
+    page_title="Mindful AI Companion",
+    page_icon=favicon_url,          # ← This makes your lotus the tab icon!
+    layout="centered",
+    initial_sidebar_state="expanded",
+)
 # -------------------------- CONFIG --------------------------
 st.set_page_config(
     page_title="Mindful AI Companion",
