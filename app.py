@@ -10,7 +10,7 @@ favicon_url = "https://raw.githubusercontent.com/Wellnessmatters/mindful-ai-comp
 
 st.set_page_config(
     page_title="Mindful AI Companion",
-    page_icon=favicon_url,          # ← This makes your lotus the tab icon!
+    page_icon="🪷",       # Lotus emoji - shows as a blue lotuson most browsers!
     layout="centered",
     initial_sidebar_state="expanded",
 )
