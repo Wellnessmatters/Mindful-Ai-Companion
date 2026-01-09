@@ -6,7 +6,7 @@ import json
 import base64
 
 # Use your uploaded logo as favicon (tab icon)
-favicon_url = "https://raw.githubusercontent.com/Wellnessmatters/mindful-ai-companion/main/Lotus-logo.png"
+favicon_url = "https://raw.githubusercontent.com/Wellnessmatters/mindful-ai-companion/main/Mindful_AI-removebg-preview.png"
 
 st.set_page_config(
     page_title="Mindful AI Companion",
