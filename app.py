@@ -3,25 +3,22 @@ import openai
 import os
 from datetime import datetime
 import json
-import base64
+from PIL import Image
+import io
+# Load your uploaded logo from the repo (exact filename!)
+logo = Image.open("Mindful_AI-removebg-preview.png")
 
-# Use your uploaded logo as favicon (tab icon)
-favicon_url = "https://raw.githubusercontent.com/Wellnessmatters/mindful-ai-companion/main/Mindful_AI-removebg-preview.png"
-
+# Convert to bytes buffer for favicon (this helps Cloud)
+buf = io.BytesIO()
+logo.save(buf, format="PNG")
+byte_im = buf.getvalue()
 st.set_page_config(
     page_title="Mindful AI Companion",
-    page_icon="🪷",       # Lotus emoji - shows as a blue lotuson most browsers!
+    page_icon=byte_im,  # Your lotus PNG as favicon!
     layout="centered",
     initial_sidebar_state="expanded",
 )
 # -------------------------- CONFIG --------------------------
-st.set_page_config(
-    page_title="Mindful AI Companion",
-    page_icon="🧠",
-    layout="centered",
-    initial_sidebar_state="expanded",
-)
-
 st.title("🧠 Mindful AI Companion")
 st.markdown("### Your 24/7 Mental Wellness Companion")
 st.caption("Your 24/7 personal mental wellness coach • Always here to listen")
