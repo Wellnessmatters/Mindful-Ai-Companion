@@ -40,8 +40,7 @@ st.link_button(
     PREMIUM_URL,
     type="primary",
     help="Unlimited chats • Advanced mood insights • Custom plans • Ad-free",
-    use_container_width=True
-)
+    use_container_width=True)
     st.caption("Data is private • No accounts needed yet")
 
 # Initialize session state
