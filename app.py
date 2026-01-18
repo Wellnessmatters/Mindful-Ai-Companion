@@ -33,7 +33,7 @@ with st.sidebar:
     
     st.header("Upgrade for More 💎")
     # ── Premium upgrade button ──
-PREMIUM_URL = https://wellnessmatters12.gumroad.com/l/wvjaec   # ← CHANGE THIS LINE
+PREMIUM_URL = "https://wellnessmatters12.gumroad.com/l/wvjaec"   # ← CHANGE THIS LINE
 
 st.link_button(
     "Unlock Premium ($4.99/mo)",
