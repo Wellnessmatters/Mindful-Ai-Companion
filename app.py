@@ -42,7 +42,6 @@ st.link_button(
     help="Unlimited chats • Advanced mood insights • Custom plans • Ad-free",
     use_container_width=True)
     st.caption("Data is private • No accounts needed yet")
-
 # Initialize session state
 if "messages" not in st.session_state:
     st.session_state.messages = [
