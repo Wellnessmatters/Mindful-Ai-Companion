@@ -32,9 +32,16 @@ with st.sidebar:
     )
     
     st.header("Upgrade for More 💎")
-    if st.button("Unlock Premium Features ($4.99/mo)", type="primary"):
-        st.warning("Premium coming soon! Get unlimited chats, mood insights, and custom plans.")
-    
+    # ── Premium upgrade button ──
+PREMIUM_URL = https://wellnessmatters12.gumroad.com/l/wvjaec   # ← CHANGE THIS LINE
+
+st.link_button(
+    "Unlock Premium ($4.99/mo)",
+    PREMIUM_URL,
+    type="primary",
+    help="Unlimited chats • Advanced mood insights • Custom plans • Ad-free",
+    use_container_width=True
+)
     st.caption("Data is private • No accounts needed yet")
 
 # Initialize session state
