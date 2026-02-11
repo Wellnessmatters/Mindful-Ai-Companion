@@ -119,7 +119,7 @@ if prompt := st.chat_input("Share what's on your mind..."):
 
         st.markdown(ai_reply)
         # After the AI response is saved
-        st.session_state.messages.append({"role": "assistant", "content": full_response})
+        st.session_state.messages.append({"role": "assistant", "content": ai_reply})
 
         # ── PREMIUM TEASER ──
         # Show teaser after 10 messages in free mode
