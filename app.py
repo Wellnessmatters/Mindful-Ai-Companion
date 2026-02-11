@@ -5,6 +5,7 @@ from datetime import datetime
 import json
 from PIL import Image
 import io
+PREMIUM_URL = "https://wellnessmatters12.gumroad.com/l/wvjaec" 
 # Load your uploaded logo from the repo (exact filename!)
 logo = Image.open("Mindful_AI-removebg-preview.png")
 
@@ -118,6 +119,17 @@ if prompt := st.chat_input("Share what's on your mind..."):
 
         st.markdown(ai_reply)
         st.session_state.messages.append({"role": "assistant", "content": ai_reply})
+        # After the AI response is saved
+        st.session_state.messages.append({"role": "assistant", "content": full_response})
+
+        # ── PREMIUM TEASER ──
+        # Show teaser after 10 messages in free mode
+        if "premium" not in st.session_state:
+            st.session_state.premium = False
+
+        if len(st.session_state.messages) >= 10 and not st.session_state.premium:
+            st.info("You've reached the free daily message limit. Upgrade for unlimited chats + advanced mood insights.")
+            st.link_button("Unlock Premium ($4.99/mo)", PREMIUM_URL, type="primary")
 
 # Mood insights (basic version)
 if len(st.session_state.mood_history) > 2:
