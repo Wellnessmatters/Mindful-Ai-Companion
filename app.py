@@ -118,7 +118,7 @@ if prompt := st.chat_input("Share what's on your mind..."):
                 )
 
         st.markdown(ai_reply)
-        st.session_state.messages.append({"role": "assistant", "content": ai_reply})
+        st.session_state.messages.append({"role": "assistant", "content": full_response})
         # After the AI response is saved
         st.session_state.messages.append({"role": "assistant", "content": full_response})
 
